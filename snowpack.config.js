@@ -5,6 +5,7 @@ module.exports = {
     src: { url: '/dist' },
   },
   plugins: [
+    ['@snowpack/plugin-sass', { loadPath: ['node_modules'] }],
     [
       '@snowpack/plugin-typescript',
       {
