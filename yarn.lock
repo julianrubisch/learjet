@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@github/catalyst/-/catalyst-1.1.3.tgz#852311b3097927ef594a77041472ad6e3ae46c7d"
   integrity sha512-GHacM4STeyWTBosHFZlKbcIgFZ8PztEXJ7kAdxEoQG+Fb9kkQ+GVSFZYcFsqQkjyy49mNVfofiiLnJiWO8y5MA==
 
+"@github/details-dialog-element@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@github/details-dialog-element/-/details-dialog-element-3.1.2.tgz#61f6595c71d786b1a77fbbe79db4c0b9a224fc80"
+  integrity sha512-kUz7VYKmgOtlAo96TVeXSq5bKDS/3Wm0SZt4UetJK2CcG0/wsx/Eif/fHx1HYEwVsa7FnrB/kCzby0JE8R88zQ==
+
 "@github/hotkey@^1.4.4":
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/@github/hotkey/-/hotkey-1.4.4.tgz#d25a877723f8cefef70f092c2e51c710140ff5e8"

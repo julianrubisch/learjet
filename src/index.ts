@@ -5,4 +5,6 @@
 import './index.scss';
 
 import HotkeyNavElement from './components/hotkey_nav';
-export default HotkeyNavElement;
+import HotkeyNavItemElement from './components/hotkey_nav_item';
+
+export { HotkeyNavElement, HotkeyNavItemElement };

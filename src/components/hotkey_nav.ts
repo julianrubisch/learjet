@@ -1,11 +1,13 @@
 import { controller, attr } from '@github/catalyst';
 import { install } from '@github/hotkey';
-import { html, render } from '@github/jtml';
+import { html, render, unsafeHTML } from '@github/jtml';
 
-import config from '../../learjet.config.js';
+import baseConfig from '../../learjet.config.js';
 
 @controller
 class HotkeyNavElement extends HTMLElement {
+  @attr items = JSON.stringify(baseConfig.items);
+
   connectedCallback() {
     this.update();
 
@@ -15,30 +17,25 @@ class HotkeyNavElement extends HTMLElement {
   }
 
   update() {
-    const navItem = ({ title, hotkey }) =>
-      html`
-        <a
-          class="menu-item f3-light d-flex"
-          href="#${hotkey}"
+    const navItem = ({ title, hotkey, content, dark }) => {
+      console.log(!!dark);
+      return html`
+        <hotkey-nav-item
+          class="menu-item f3-light"
+          data-title="${title}"
           data-hotkey="${hotkey}"
-          ><span
-            class="color-text-tertiary border rounded-3 col-1 mr-2 color-shadow-small text-center"
-            >${hotkey.toUpperCase()}</span
-          >${title}</a
-        >
+          data-content="${JSON.stringify(content)}"
+        />
       `;
+    };
 
-    const nav = () =>
+    const nav = items =>
       html`
-        <nav
-          id="entry_nav"
-          class="menu color-shadow-medium"
-          aria-label="Main Menu"
-        >
-          ${config.entry.map(item => navItem(item))}
+        <nav class="menu color-shadow-medium" aria-label="Main Menu">
+          ${items.map(item => navItem(item))}
         </nav>
       `;
-    render(nav(this.config), this);
+    render(nav(JSON.parse(this.items)), this);
   }
 }
 
