@@ -8,20 +8,19 @@
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <title>Snowpack App</title>
   </head>
-  <body>
+  <body class="color-bg-secondary">
+    <script type="module" src="learjet.config.js"></script>
     <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <div class="position-absolute top-0 left-0">
+      <p class="h000-mktg px-4 mb-0">LearJet</p>
+      <p class="f0-light color-text-secondary px-4 mb-0">Customizable Start Page Template</p>
+      <!-- <p class="f0-light color-text-secondary px-4">Built With the GitHub Stack</p> -->
+    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-      -->
-    <div class="Box">
-      This is a box.
+    <div class="container-sm d-flex flex-justify-center flex-items-center  height-full">
+      <hotkey-nav class="width-full"/>
+    </div>
     </div>
   </body>
 </html>

@@ -4,6 +4,7 @@ module.exports = {
     public: { url: '/', static: true },
     src: { url: '/dist' },
   },
+  exclude: ['**/*~', '**/#*#'],
   plugins: [
     ['@snowpack/plugin-sass', { loadPath: ['node_modules'] }],
     [
